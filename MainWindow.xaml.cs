@@ -21,13 +21,19 @@ namespace SmartphoneShop
         public MainWindow()
         {
             InitializeComponent();
-            toProductsPage();
+            toProductsPage(null, null);
         }
 
-        private void toProductsPage()
+        private void toProductsPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new ProductsPage());
             Title = APP_PREFIX + "товары";
+        }
+
+        private void toBasketPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new BasketPage());
+            Title = APP_PREFIX + "корзина";
         }
     }
 }
