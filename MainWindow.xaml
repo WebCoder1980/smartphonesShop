@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="" Height="550" Width="1050">
     <Grid>
-        <Button Content="Создать аккаунт" Click="toRegistrationPage" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Content="Войти" Click="toLoginPage" HorizontalAlignment="Left" Height="50" Margin="761,11,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Content="Выйти" Click="logout" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112" Visibility="Hidden"/>
-        <Label Content="Привет, гость!" HorizontalAlignment="Left" Height="50" Margin="481,11,0,0" VerticalAlignment="Top" Width="275" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="registerButton" Content="Создать аккаунт" Click="toRegistrationPage" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="loginButton" Content="Войти" Click="toLoginPage" HorizontalAlignment="Left" Height="50" Margin="761,11,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="logoutButton" Content="Выйти" Click="logout" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112" Visibility="Hidden"/>
+        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="50" Margin="481,11,0,0" VerticalAlignment="Top" Width="275" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button Content="Каталог" Click="toProductsPage" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
         <Button Content="Корзина" Click="toBasketPage" HorizontalAlignment="Left" Height="42" Margin="167,11,0,0" VerticalAlignment="Top" Width="152"/>
         <Button Content="Админ панель" Click="toAdminPage" HorizontalAlignment="Left" Height="42" Margin="324,11,0,0" VerticalAlignment="Top" Width="152" Visibility="Hidden"/>

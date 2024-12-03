@@ -28,5 +28,18 @@ namespace ProductCatalog.Service
                 db.SaveChanges();
             }
         }
+
+        public void login(String name, String password)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                var user = db.users.SingleOrDefault(u => u.name == name && u.password == password);
+
+                if (user == null)
+                {
+                    throw new InvalidOperationException("Пользователь с такими данными не найден.");
+                }
+            }
+        }
     }
 }

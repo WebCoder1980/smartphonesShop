@@ -1,4 +1,4 @@
-﻿using SmartphoneShop.Enum;
+﻿using ProductCatalog.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +10,29 @@ namespace SmartphoneShop.Service
     public class SesseionInfo
     {
         public IBasketController BasketController { get; set; }
-        private SessionType CurrentSessionType { get; set; }
+        
+        DbService DatabaseService { get; set; }
 
-        public SesseionInfo(IBasketController basketController)
+        String login, password;
+
+        MainWindow ParentWindow { get; set; }
+
+        public SesseionInfo(MainWindow mainWindow, IBasketController basketController)
         {
+            DatabaseService = new DbService();
             BasketController = basketController;
+            ParentWindow = mainWindow;
         }
 
+        public void Login(String name, String password)
+        {
+            DatabaseService.login(name, password);
 
+            login = name;
+            this.password = password;
+
+            ParentWindow.LoginEvent(login);
+            ParentWindow.toProductsPage(null, null);
+        }
     }
 }

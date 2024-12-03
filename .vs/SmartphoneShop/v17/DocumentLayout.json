@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\basketpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\basketpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\service\\sesseioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:service\\sesseioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\service\\ibasketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:service\\ibasketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\registrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\registrationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\registrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\registrationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\service\\basketguestcontrooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:service\\basketguestcontrooler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\service\\sesseioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:service\\sesseioninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +42,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BasketPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\BasketPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\BasketPage.xaml.cs",
-              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\BasketPage.xaml.cs",
-              "RelativeToolTip": "View\\BasketPage.xaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwD0AAABcAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "RegistrationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\RegistrationPage.xaml",
+              "RelativeDocumentMoniker": "View\\RegistrationPage.xaml",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\RegistrationPage.xaml",
+              "RelativeToolTip": "View\\RegistrationPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-03T18:03:55.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegistrationPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\RegistrationPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\RegistrationPage.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\RegistrationPage.xaml.cs",
+              "RelativeToolTip": "View\\RegistrationPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T17:11:54.88Z",
+              "WhenOpened": "2024-12-03T18:03:50.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-03T17:56:04.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IBasketController.cs",
-              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\IBasketController.cs",
-              "RelativeDocumentMoniker": "Service\\IBasketController.cs",
-              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\IBasketController.cs",
-              "RelativeToolTip": "Service\\IBasketController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T17:10:33.273Z",
+              "WhenOpened": "2024-12-03T17:55:34.27Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BasketGuestControoler.cs",
-              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\BasketGuestControoler.cs",
-              "RelativeDocumentMoniker": "Service\\BasketGuestControoler.cs",
-              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\BasketGuestControoler.cs",
-              "RelativeToolTip": "Service\\BasketGuestControoler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T17:09:20.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SesseionInfo.cs",
               "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\SesseionInfo.cs",
               "RelativeDocumentMoniker": "Service\\SesseionInfo.cs",
               "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\SesseionInfo.cs",
               "RelativeToolTip": "Service\\SesseionInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCIAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T17:08:16.7Z",
+              "WhenOpened": "2024-12-03T17:52:07.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\LoginPage.xaml",
+              "RelativeToolTip": "View\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-03T17:29:35.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\LoginPage.xaml.cs",
+              "RelativeToolTip": "View\\LoginPage.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAASwCMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T17:29:30.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BasketGuestControoler.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\BasketGuestControoler.cs",
+              "RelativeDocumentMoniker": "Service\\BasketGuestControoler.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\BasketGuestControoler.cs",
+              "RelativeToolTip": "Service\\BasketGuestControoler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T17:09:20.421Z",
               "EditorCaption": ""
             }
           ]

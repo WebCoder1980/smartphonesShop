@@ -27,45 +27,54 @@ namespace SmartphoneShop
         {
             InitializeComponent();
 
-            sesseionInfo = new SesseionInfo(new BasketGuestControoler());
+            sesseionInfo = new SesseionInfo(this, new BasketGuestControoler());
 
             toProductsPage(null, null);
         }
 
-        private void toProductsPage(object sender, RoutedEventArgs e)
+        public void toProductsPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new ProductsPage(sesseionInfo));
             Title = APP_PREFIX + "товары";
         }
 
-        private void toBasketPage(object sender, RoutedEventArgs e)
+        public void toBasketPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new BasketPage(sesseionInfo));
             Title = APP_PREFIX + "корзина";
         }
 
-        private void toLoginPage(object sender, RoutedEventArgs e)
+        public void toLoginPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new LoginPage(sesseionInfo));
             Title = APP_PREFIX + "войти в систему";
         }
 
-        private void toRegistrationPage(object sender, RoutedEventArgs e)
+        public void toRegistrationPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new RegistrationPage(sesseionInfo));
             Title = APP_PREFIX + "зарегистрироваться";
         }
 
-        private void toAdminPage(object sender, RoutedEventArgs e)
+        public void toAdminPage(object sender, RoutedEventArgs e)
         {
             throw new Exception("Админ панель ещё недоступна");
             //MainFrame.Navigate();
             //Title = APP_PREFIX + "зарегистрироваться";
         }
 
-        private void logout(object sender, RoutedEventArgs e)
+        public void logout(object sender, RoutedEventArgs e)
         {
             // На разработке
+        }
+
+        public void LoginEvent(String newName)
+        {
+            userLabel.Content = "Привет, " + newName;
+
+            loginButton.Visibility = Visibility.Hidden;
+            registerButton.Visibility = Visibility.Hidden;
+            logoutButton.Visibility = Visibility.Visible;
         }
     }
 }
