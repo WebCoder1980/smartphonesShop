@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\productspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\productspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\service\\dbcontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:service\\dbcontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\control\\productdatagriditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:control\\productdatagriditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\productspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\productspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\smartphoneshop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:smartphoneshop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDataGridItem.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Control\\ProductDataGridItem.cs",
+              "RelativeDocumentMoniker": "Control\\ProductDataGridItem.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Control\\ProductDataGridItem.cs",
+              "RelativeToolTip": "Control\\ProductDataGridItem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBoAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:10:55.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SmartphoneShop",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\SmartphoneShop.csproj",
+              "RelativeDocumentMoniker": "SmartphoneShop.csproj",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\SmartphoneShop.csproj",
+              "RelativeToolTip": "SmartphoneShop.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-03T13:09:38.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\ProductsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml.cs",
+              "RelativeToolTip": "View\\ProductsPage.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvxgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:00:45.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml",
+              "RelativeDocumentMoniker": "View\\ProductsPage.xaml",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml",
+              "RelativeToolTip": "View\\ProductsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-03T13:00:39.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbContextService.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\DbContextService.cs",
+              "RelativeDocumentMoniker": "Service\\DbContextService.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\Service\\DbContextService.cs",
+              "RelativeToolTip": "Service\\DbContextService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:05:14.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-02T09:36:02.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:36:01.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
