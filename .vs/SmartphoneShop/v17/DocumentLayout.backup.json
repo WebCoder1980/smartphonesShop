@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\view\\productspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:view\\productspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|c:\\users\\maxsmg\\documents\\vsprojects\\smartphonesshop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FBE26B-F3DC-4CE8-AEF1-8E6022C39D33}|SmartphoneShop.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,38 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T14:06:23.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-03T14:00:28.296Z",
+              "WhenOpened": "2024-12-03T15:12:53.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml",
-              "RelativeDocumentMoniker": "View\\ProductsPage.xaml",
-              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\View\\ProductsPage.xaml",
-              "RelativeToolTip": "View\\ProductsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-03T13:42:44.177Z",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\maxsmg\\Documents\\VSProjects\\smartphonesShop\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwCgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T15:12:06.357Z",
               "EditorCaption": ""
             }
           ]

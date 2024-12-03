@@ -35,5 +35,29 @@ namespace SmartphoneShop
             MainFrame.Navigate(new BasketPage());
             Title = APP_PREFIX + "корзина";
         }
+
+        private void toLoginPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new LoginPage());
+            Title = APP_PREFIX + "войти в систему";
+        }
+
+        private void toRegistrationPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new RegistrationPage());
+            Title = APP_PREFIX + "зарегистрироваться";
+        }
+
+        private void toAdminPage(object sender, RoutedEventArgs e)
+        {
+            throw new Exception("Админ панель ещё недоступна");
+            //MainFrame.Navigate();
+            //Title = APP_PREFIX + "зарегистрироваться";
+        }
+
+        private void logout(object sender, RoutedEventArgs e)
+        {
+            // На разработке
+        }
     }
 }
