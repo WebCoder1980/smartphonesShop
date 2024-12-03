@@ -5,16 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SmartphoneShop.View"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="1000"
+      d:DesignHeight="400" d:DesignWidth="1000"
       Title="ProductsPage">
 
     <Grid>
-        <Button Content="Войти" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button Content="Войти" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
-        <Label Content="Гость" HorizontalAlignment="Left" Height="50" Margin="742,10,0,0" VerticalAlignment="Top" Width="131" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Каталог" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button Content="Корзина" HorizontalAlignment="Left" Height="42" Margin="167,11,0,0" VerticalAlignment="Top" Width="152"/>
-        <DataGrid x:Name="productsDataGrid" HorizontalAlignment="Center" Height="377" Margin="0,65,0,0" VerticalAlignment="Top" Width="980" d:ItemsSource="{Binding Items}" AutoGenerateColumns="False">
+        <DataGrid x:Name="productsDataGrid" HorizontalAlignment="Center" Height="340" VerticalAlignment="Top" Width="980" d:ItemsSource="{Binding Items}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{Binding IsSelected}"/>
                 <DataGridTextColumn Header="№" IsReadOnly="True" Binding="{Binding Id}"/>
@@ -23,6 +18,6 @@
                 <DataGridTextColumn Header="Название" IsReadOnly="True" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить в корзину" HorizontalAlignment="Left" Height="43" Margin="10,447,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Добавить в корзину" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
     </Grid>
 </Page>

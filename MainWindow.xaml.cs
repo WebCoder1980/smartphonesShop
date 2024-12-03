@@ -17,10 +17,17 @@ namespace SmartphoneShop
     /// </summary>
     public partial class MainWindow : Window
     {
+        const String APP_PREFIX = "MProducts - ";
         public MainWindow()
         {
             InitializeComponent();
+            toProductsPage();
+        }
+
+        private void toProductsPage()
+        {
             MainFrame.Navigate(new ProductsPage());
+            Title = APP_PREFIX + "товары";
         }
     }
 }

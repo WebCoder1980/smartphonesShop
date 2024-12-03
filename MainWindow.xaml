@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartphoneShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1000">
+        Title="" Height="550" Width="1050">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-    </Grid>
+        <Button Content="Создать аккаунт" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Height="50" Margin="761,11,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button Content="Выйти" HorizontalAlignment="Left" Height="50" Margin="878,10,0,0" VerticalAlignment="Top" Width="112" Visibility="Hidden"/>
+        <Label Content="Привет, гость!" HorizontalAlignment="Left" Height="50" Margin="481,11,0,0" VerticalAlignment="Top" Width="275" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Каталог" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Корзина" HorizontalAlignment="Left" Height="42" Margin="167,11,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Покупки" HorizontalAlignment="Left" Height="42" Margin="324,11,0,0" VerticalAlignment="Top" Width="152"/>
+        <Grid Margin="0,100,0,0">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+        </Grid>
 </Window>
