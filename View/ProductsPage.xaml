@@ -18,6 +18,6 @@
                 <DataGridTextColumn Header="Название" IsReadOnly="True" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить в корзину" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Добавить в корзину" Click="toBasketButtonClicked" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
     </Grid>
 </Page>

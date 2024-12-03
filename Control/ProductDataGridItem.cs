@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartphoneShop.Control
 {
-    class ProductDataGridItem
+    public class ProductDataGridItem
     {
         public bool IsSelected { get; set; }
         public string Id { get; set; }

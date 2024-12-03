@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using ProductCatalog.Model;
+using SmartphoneShop.Model;
 
 namespace ProductCatalog.Service
 {
@@ -19,6 +20,7 @@ namespace ProductCatalog.Service
         public DbSet<UserRoleModel> userroles { get; set; } = null!;
         public DbSet<UserModel> users { get; set; } = null!;
         public DbSet<ProductModel> products { get; set; } = null!;
+        public DbSet<BasketItemModel> basketItems { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

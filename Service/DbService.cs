@@ -1,4 +1,5 @@
 ﻿using ProductCatalog.Model;
+using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,15 @@ namespace ProductCatalog.Service
             }
 
             return result;
+        }
+
+        public void AddBasketItems(List<BasketItemModel> basketItems)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                db.basketItems.AddRange(basketItems);
+                db.SaveChanges();
+            }
         }
     }
 }

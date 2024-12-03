@@ -1,5 +1,10 @@
-﻿using System;
+﻿using ProductCatalog.Model;
+using ProductCatalog.Service;
+using SmartphoneShop.Control;
+using SmartphoneShop.Service;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +25,38 @@ namespace SmartphoneShop.View
     /// </summary>
     public partial class BasketPage : Page
     {
-        public BasketPage()
+        ObservableCollection<ProductDataGridItem> productsDataGridItems { get; set; }
+
+        SesseionInfo CurrentSesseionInfo { get; set; }
+        public BasketPage(SesseionInfo sessionInfo)
         {
             InitializeComponent();
+            CurrentSesseionInfo = sessionInfo;
+
+            productsDataGridItems = new ObservableCollection<ProductDataGridItem>();
+            productsDataGrid.ItemsSource = productsDataGridItems;
+
+            foreach (var i in sessionInfo.BasketController.GetItems())
+            {
+                productsDataGridItems.Add(new ProductDataGridItem(i));
+            }
+        }
+
+        private void buyButtonClicked(object sender, RoutedEventArgs e)
+        {
+            List <ProductModel> selectedProducts = new List<ProductModel>();
+            foreach (var i in productsDataGridItems)
+            {
+                if (i.IsSelected == true)
+                {
+                    selectedProducts.Add(new ProductModel(i));
+                }
+            }
+               
+            if (selectedProducts.Count() == 0)
+            {
+                MessageBox.Show("Ни один продукт не был выбран", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

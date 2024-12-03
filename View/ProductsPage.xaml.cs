@@ -1,5 +1,8 @@
-﻿using ProductCatalog.Service;
+﻿using ProductCatalog.Model;
+using ProductCatalog.Service;
 using SmartphoneShop.Control;
+using SmartphoneShop.Model;
+using SmartphoneShop.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,18 +28,59 @@ namespace SmartphoneShop.View
     {
         ObservableCollection<ProductDataGridItem> productsDataGridItems { get; set; }
         DbService dbService;
-        public ProductsPage()
+
+        SesseionInfo sesseionInfo;
+        public ProductsPage(SesseionInfo sesseionInfo)
         {
             InitializeComponent();
+
+            this.sesseionInfo = sesseionInfo;
+
             productsDataGridItems = new ObservableCollection<ProductDataGridItem>();
             productsDataGrid.ItemsSource = productsDataGridItems;
 
             dbService = new DbService();
 
+            refreshProductsDataGrid();
+        }
+
+        private void refreshProductsDataGrid()
+        {
             foreach (var i in dbService.getAllProducts())
             {
                 productsDataGridItems.Add(new ProductDataGridItem(i));
             }
+        }
+
+        public void refreshProductsDataGridItems()
+        {
+            var newCollection = new ObservableCollection<ProductDataGridItem>(productsDataGridItems);
+            productsDataGridItems = newCollection;
+            productsDataGrid.ItemsSource = newCollection;
+        }
+
+        private void toBasketButtonClicked(object sender, RoutedEventArgs e)
+        {
+            List<ProductModel> selectedProducts = new List<ProductModel>();
+            foreach (var i in productsDataGridItems)
+            {
+                if (i.IsSelected == true)
+                {
+                    selectedProducts.Add(new ProductModel(i));
+                    i.IsSelected = false;
+                }
+            }
+
+            if (selectedProducts.Count() == 0)
+            {
+                MessageBox.Show("Ни один продукт не был выбран", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            refreshProductsDataGridItems();
+
+            sesseionInfo.BasketController.AddItems(selectedProducts);
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SmartphoneShop.View;
+﻿using SmartphoneShop.Service;
+using SmartphoneShop.View;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,33 +19,40 @@ namespace SmartphoneShop
     public partial class MainWindow : Window
     {
         const String APP_PREFIX = "MProducts - ";
+
+        SesseionInfo sesseionInfo;
+        IBasketController basketController;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            sesseionInfo = new SesseionInfo(new BasketGuestControoler());
+
             toProductsPage(null, null);
         }
 
         private void toProductsPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new ProductsPage());
+            MainFrame.Navigate(new ProductsPage(sesseionInfo));
             Title = APP_PREFIX + "товары";
         }
 
         private void toBasketPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new BasketPage());
+            MainFrame.Navigate(new BasketPage(sesseionInfo));
             Title = APP_PREFIX + "корзина";
         }
 
         private void toLoginPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new LoginPage());
+            MainFrame.Navigate(new LoginPage(sesseionInfo));
             Title = APP_PREFIX + "войти в систему";
         }
 
         private void toRegistrationPage(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new RegistrationPage());
+            MainFrame.Navigate(new RegistrationPage(sesseionInfo));
             Title = APP_PREFIX + "зарегистрироваться";
         }
 

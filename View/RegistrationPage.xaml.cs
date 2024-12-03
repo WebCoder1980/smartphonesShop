@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartphoneShop.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace SmartphoneShop.View
     /// </summary>
     public partial class RegistrationPage : Page
     {
-        public RegistrationPage()
+        SesseionInfo CurrentSessionInfo { get; set; }
+        public RegistrationPage(SesseionInfo sesseion)
         {
             InitializeComponent();
+
+            CurrentSessionInfo = sesseion;
         }
     }
 }
