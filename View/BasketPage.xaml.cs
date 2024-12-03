@@ -56,7 +56,11 @@ namespace SmartphoneShop.View
             if (selectedProducts.Count() == 0)
             {
                 MessageBox.Show("Ни один продукт не был выбран", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
+
+            String result = CurrentSesseionInfo.BasketController.BuyAll();
+            MessageBox.Show(result, "Сообщение", MessageBoxButton.OK, MessageBoxImage.None);
         }
     }
 }

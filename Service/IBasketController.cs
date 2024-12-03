@@ -12,5 +12,6 @@ namespace SmartphoneShop.Service
     {
         public void AddItems(List<ProductModel> basketItems);
         public List<ProductModel> GetItems();
+        public String BuyAll();
     }
 }

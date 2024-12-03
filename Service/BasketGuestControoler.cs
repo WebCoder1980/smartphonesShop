@@ -25,5 +25,10 @@ namespace SmartphoneShop.Service
         {
             return basketItems;
         }
+
+        public String BuyAll()
+        {
+            return "Войдите в систему, что бы купить!";
+        }
     }
 }
