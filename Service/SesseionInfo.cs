@@ -22,7 +22,7 @@ namespace SmartphoneShop.Service
             DatabaseService = new DbService();
             BasketController = basketController;
             ParentWindow = mainWindow;
-        }
+        }9
 
         public void Login(String name, String password)
         {
