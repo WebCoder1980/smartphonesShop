@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SmartphoneShop.Service
 {
@@ -34,6 +35,15 @@ namespace SmartphoneShop.Service
             ParentWindow.toProductsPage(null, null);
 
             BasketController = new BasketUserController((BasketGuestControoler) BasketController);
+        }
+
+        public void Logout()
+        {
+            CurrentUser = null;
+
+            ParentWindow.LogoutEvent("гость");
+
+            BasketController = new BasketGuestControoler((BasketUserController)BasketController);
         }
     }
 }

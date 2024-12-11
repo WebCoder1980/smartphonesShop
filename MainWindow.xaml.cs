@@ -65,7 +65,7 @@ namespace SmartphoneShop
 
         public void logout(object sender, RoutedEventArgs e)
         {
-            // На разработке
+            sesseionInfo.Logout();
         }
 
         public void LoginEvent(String newName)
@@ -75,6 +75,15 @@ namespace SmartphoneShop
             loginButton.Visibility = Visibility.Hidden;
             registerButton.Visibility = Visibility.Hidden;
             logoutButton.Visibility = Visibility.Visible;
+        }
+
+        public void LogoutEvent(String newName)
+        {
+            userLabel.Content = "Привет, " + newName;
+
+            loginButton.Visibility = Visibility.Visible;
+            registerButton.Visibility = Visibility.Visible;
+            logoutButton.Visibility = Visibility.Hidden;
         }
     }
 }
