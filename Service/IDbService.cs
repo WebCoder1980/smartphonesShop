@@ -13,5 +13,6 @@ namespace ProductCatalog.Service
         public List<ProductModel> getAllProducts();
         public void AddBasketItems(List<BasketItemModel> basketItems);
         public UserModel login(String name, String password);
+        public void register(String name, String password);
     }
 }

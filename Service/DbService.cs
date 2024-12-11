@@ -42,5 +42,29 @@ namespace ProductCatalog.Service
                 return user;
             }
         }
+
+        public void register(String name, String password)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                var existingUser = db.users.SingleOrDefault(u => u.name == name);
+
+                if (existingUser != null)
+                {
+                    throw new InvalidOperationException("Пользователь с таким именем уже существует.");
+                }
+
+                UserModel newUser = new UserModel
+                {
+                    name = name,
+                    password = password,
+                    role = 2
+                };
+
+                db.users.Add(newUser);
+
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -37,6 +37,13 @@ namespace SmartphoneShop.Service
             BasketController = new BasketUserController((BasketGuestControoler) BasketController);
         }
 
+        public void Register(String name, String password)
+        {
+            DatabaseService.register(name, password);
+
+            ParentWindow.toLoginPage(null, null);
+        }
+
         public void Logout()
         {
             CurrentUser = null;
