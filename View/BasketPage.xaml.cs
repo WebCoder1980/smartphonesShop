@@ -36,10 +36,23 @@ namespace SmartphoneShop.View
             productsDataGridItems = new ObservableCollection<ProductDataGridItem>();
             productsDataGrid.ItemsSource = productsDataGridItems;
 
-            foreach (var i in sessionInfo.BasketController.GetItems())
+            foreach (var i in CurrentSesseionInfo.BasketController.GetItems())
             {
-                productsDataGridItems.Add(new ProductDataGridItem(i));
+                productsDataGridItems.Add(i);
             }
+        }
+
+        public void refreshProductsDataGridItems()
+        {
+            var newCollection = new ObservableCollection<ProductDataGridItem>();
+
+            foreach (var i in CurrentSesseionInfo.BasketController.GetItems())
+            {
+                newCollection.Add(i);
+            }
+
+            productsDataGridItems = newCollection;
+            productsDataGrid.ItemsSource = newCollection;
         }
 
         private void buyButtonClicked(object sender, RoutedEventArgs e)
@@ -60,6 +73,7 @@ namespace SmartphoneShop.View
             }
 
             String result = CurrentSesseionInfo.BasketController.BuyAll();
+            refreshProductsDataGridItems();
             MessageBox.Show(result, "Сообщение", MessageBoxButton.OK, MessageBoxImage.None);
         }
     }

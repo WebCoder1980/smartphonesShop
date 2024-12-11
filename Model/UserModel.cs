@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.Model
 {
-    internal class UserModel
+    public class UserModel
     {
         public int id { get; set; }
         public string name { get; set; }

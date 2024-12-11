@@ -79,7 +79,15 @@ namespace SmartphoneShop.View
 
             refreshProductsDataGridItems();
 
-            sesseionInfo.BasketController.AddItems(selectedProducts);
+            List<ProductDataGridItem> selectedProductsGridItems = new List<ProductDataGridItem>();
+
+            foreach (var i in selectedProducts)
+            {
+                i.count = 1;
+                selectedProductsGridItems.Add(new ProductDataGridItem(i));
+            }
+
+            sesseionInfo.BasketController.AddItems(selectedProductsGridItems);
 
         }
     }

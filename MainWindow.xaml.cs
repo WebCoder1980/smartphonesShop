@@ -27,7 +27,7 @@ namespace SmartphoneShop
         {
             InitializeComponent();
 
-            sesseionInfo = new SesseionInfo(this, new BasketGuestControoler());
+            sesseionInfo = new SesseionInfo(this, new BasketGuestControoler(sesseionInfo));
 
             toProductsPage(null, null);
         }

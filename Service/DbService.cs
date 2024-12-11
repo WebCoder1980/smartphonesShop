@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.Service
 {
-    internal class DbService : IDbService
+    public class DbService : IDbService
     {
         public List<ProductModel> getAllProducts() {
             List<ProductModel> result;
@@ -29,7 +29,7 @@ namespace ProductCatalog.Service
             }
         }
 
-        public void login(String name, String password)
+        public UserModel login(String name, String password)
         {
             using (DbContextService db = new DbContextService())
             {
@@ -39,6 +39,7 @@ namespace ProductCatalog.Service
                 {
                     throw new InvalidOperationException("Пользователь с такими данными не найден.");
                 }
+                return user;
             }
         }
     }

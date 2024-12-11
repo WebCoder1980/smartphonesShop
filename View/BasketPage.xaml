@@ -14,7 +14,7 @@
                 <DataGridCheckBoxColumn Binding="{Binding IsSelected}"/>
                 <DataGridTextColumn Header="№" IsReadOnly="True" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Цена" IsReadOnly="True" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Доступно" IsReadOnly="True" Binding="{Binding Count}"/>
+                <!--<DataGridTextColumn Header="Кол-во" IsReadOnly="True" Binding="{Binding Count}"/>-->
                 <DataGridTextColumn Header="Название" IsReadOnly="True" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>

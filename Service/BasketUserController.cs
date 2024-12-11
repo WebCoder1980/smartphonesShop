@@ -1,25 +1,24 @@
 ﻿using ProductCatalog.Model;
 using SmartphoneShop.Control;
-using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SmartphoneShop.Service
 {
-    public class BasketGuestControoler : IBasketController
+    public class BasketUserController : IBasketController
     {
         public SesseionInfo CurrentSesseionInfo { get; set; }
         public List<ProductDataGridItem> basketItems;
-        public BasketGuestControoler(SesseionInfo CurrentSesseionInfo)
-        {
+        public BasketUserController(SesseionInfo CurrentSesseionInfo) {
             this.CurrentSesseionInfo = CurrentSesseionInfo;
             basketItems = new List<ProductDataGridItem>();
         }
 
-        public BasketGuestControoler(BasketUserController lastBasketController)
+        public BasketUserController(BasketGuestControoler lastBasketController)
         {
             CurrentSesseionInfo = lastBasketController.CurrentSesseionInfo;
             basketItems = lastBasketController.basketItems;
@@ -37,7 +36,9 @@ namespace SmartphoneShop.Service
 
         public String BuyAll()
         {
-            return "Войдите в систему, что бы купить!";
+            basketItems = basketItems.Where(i => i.IsSelected == false).ToList();
+
+            return "Куплено!";
         }
     }
 }

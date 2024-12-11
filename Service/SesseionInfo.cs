@@ -1,4 +1,5 @@
-﻿using ProductCatalog.Service;
+﻿using ProductCatalog.Model;
+using ProductCatalog.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,28 +12,28 @@ namespace SmartphoneShop.Service
     {
         public IBasketController BasketController { get; set; }
         
-        DbService DatabaseService { get; set; }
+        public DbService DatabaseService { get; set; }
 
-        String login, password;
+        public UserModel CurrentUser { get; set; }
 
-        MainWindow ParentWindow { get; set; }
+        public MainWindow ParentWindow { get; set; }
 
         public SesseionInfo(MainWindow mainWindow, IBasketController basketController)
         {
             DatabaseService = new DbService();
             BasketController = basketController;
             ParentWindow = mainWindow;
+            CurrentUser = null;
         }
 
         public void Login(String name, String password)
         {
-            DatabaseService.login(name, password);
-
-            login = name;
-            this.password = password;
-
-            ParentWindow.LoginEvent(login);
+            CurrentUser = DatabaseService.login(name, password);
+            
+            ParentWindow.LoginEvent(name);
             ParentWindow.toProductsPage(null, null);
+
+            BasketController = new BasketUserController((BasketGuestControoler) BasketController);
         }
     }
 }
