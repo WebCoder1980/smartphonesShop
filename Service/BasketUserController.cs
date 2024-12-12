@@ -2,6 +2,7 @@
 using SmartphoneShop.Control;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,31 +13,34 @@ namespace SmartphoneShop.Service
     public class BasketUserController : IBasketController
     {
         public SesseionInfo CurrentSesseionInfo { get; set; }
-        public List<ProductDataGridItem> basketItems;
+        public ObservableCollection<ProductDataGridItem> BasketItems { get; set; }
         public BasketUserController(SesseionInfo CurrentSesseionInfo) {
             this.CurrentSesseionInfo = CurrentSesseionInfo;
-            basketItems = new List<ProductDataGridItem>();
+            BasketItems = new ObservableCollection<ProductDataGridItem>();
         }
 
         public BasketUserController(BasketGuestControoler lastBasketController)
         {
             CurrentSesseionInfo = lastBasketController.CurrentSesseionInfo;
-            basketItems = lastBasketController.basketItems;
+            BasketItems = lastBasketController.BasketItems;
         }
 
-        public void AddItems(List<ProductDataGridItem> basketItems)
+        public void AddItems(ObservableCollection<ProductDataGridItem> basketItems)
         {
-            this.basketItems.AddRange(basketItems);
+            foreach (var i in basketItems)
+            {
+                BasketItems.Add(i);
+            }
         }
 
-        public List<ProductDataGridItem> GetItems()
+        public ObservableCollection<ProductDataGridItem> GetItems()
         {
-            return basketItems;
+            return BasketItems;
         }
 
-        public String BuyAll()
+        public String Buy()
         {
-            basketItems = basketItems.Where(i => i.IsSelected == false).ToList();
+            BasketItems.Where(i => i.IsSelected == true).ToList().All(i => BasketItems.Remove(i));
 
             return "Куплено!";
         }

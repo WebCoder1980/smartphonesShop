@@ -1,15 +1,28 @@
 ﻿using ProductCatalog.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartphoneShop.Control
 {
-    public class ProductDataGridItem
+    public class ProductDataGridItem : INotifyPropertyChanged
     {
-        public bool IsSelected { get; set; }
+        private bool isSelected;
+        public bool IsSelected
+        {
+            get
+            {
+                return isSelected;
+            }
+            set
+            {
+                isSelected = value;
+                OnPropertyChanged(nameof(IsSelected));
+            }
+        }
         public string Id { get; set; }
         public string Price { get; set; }
         public string Count { get; set; }
@@ -27,6 +40,12 @@ namespace SmartphoneShop.Control
         public ProductDataGridItem(ProductModel productModel) : this(false, productModel.id.ToString(), productModel.price.ToString(), productModel.count.ToString(), productModel.name)
         {
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

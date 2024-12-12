@@ -26,9 +26,6 @@ namespace SmartphoneShop.View
     /// </summary>
     public partial class ProductsPage : Page
     {
-        ObservableCollection<ProductDataGridItem> productsDataGridItems { get; set; }
-        DbService dbService;
-
         SesseionInfo sesseionInfo;
         public ProductsPage(SesseionInfo sesseionInfo)
         {
@@ -36,33 +33,14 @@ namespace SmartphoneShop.View
 
             this.sesseionInfo = sesseionInfo;
 
-            productsDataGridItems = new ObservableCollection<ProductDataGridItem>();
-            productsDataGrid.ItemsSource = productsDataGridItems;
 
-            dbService = new DbService();
-
-            refreshProductsDataGrid();
-        }
-
-        private void refreshProductsDataGrid()
-        {
-            foreach (var i in dbService.getAllProducts())
-            {
-                productsDataGridItems.Add(new ProductDataGridItem(i));
-            }
-        }
-
-        public void refreshProductsDataGridItems()
-        {
-            var newCollection = new ObservableCollection<ProductDataGridItem>(productsDataGridItems);
-            productsDataGridItems = newCollection;
-            productsDataGrid.ItemsSource = newCollection;
+            productsDataGrid.ItemsSource = sesseionInfo.ProductServ.ProductsItems;
         }
 
         private void toBasketButtonClicked(object sender, RoutedEventArgs e)
         {
             List<ProductModel> selectedProducts = new List<ProductModel>();
-            foreach (var i in productsDataGridItems)
+            foreach (var i in sesseionInfo.ProductServ.ProductsItems)
             {
                 if (i.IsSelected == true)
                 {
@@ -77,8 +55,6 @@ namespace SmartphoneShop.View
                 return;
             }
 
-            refreshProductsDataGridItems();
-
             List<ProductDataGridItem> selectedProductsGridItems = new List<ProductDataGridItem>();
 
             foreach (var i in selectedProducts)
@@ -87,7 +63,7 @@ namespace SmartphoneShop.View
                 selectedProductsGridItems.Add(new ProductDataGridItem(i));
             }
 
-            sesseionInfo.BasketController.AddItems(selectedProductsGridItems);
+            sesseionInfo.BasketController.AddItems(new ObservableCollection<ProductDataGridItem>(selectedProductsGridItems));
 
         }
     }

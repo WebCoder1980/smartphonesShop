@@ -5,6 +5,7 @@ using SmartphoneShop.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,40 +26,19 @@ namespace SmartphoneShop.View
     /// </summary>
     public partial class BasketPage : Page
     {
-        ObservableCollection<ProductDataGridItem> productsDataGridItems { get; set; }
-
         SesseionInfo CurrentSesseionInfo { get; set; }
         public BasketPage(SesseionInfo sessionInfo)
         {
             InitializeComponent();
             CurrentSesseionInfo = sessionInfo;
 
-            productsDataGridItems = new ObservableCollection<ProductDataGridItem>();
-            productsDataGrid.ItemsSource = productsDataGridItems;
-
-            foreach (var i in CurrentSesseionInfo.BasketController.GetItems())
-            {
-                productsDataGridItems.Add(i);
-            }
-        }
-
-        public void refreshProductsDataGridItems()
-        {
-            var newCollection = new ObservableCollection<ProductDataGridItem>();
-
-            foreach (var i in CurrentSesseionInfo.BasketController.GetItems())
-            {
-                newCollection.Add(i);
-            }
-
-            productsDataGridItems = newCollection;
-            productsDataGrid.ItemsSource = newCollection;
+            productsDataGrid.ItemsSource = CurrentSesseionInfo.BasketController.BasketItems;
         }
 
         private void buyButtonClicked(object sender, RoutedEventArgs e)
         {
             List <ProductModel> selectedProducts = new List<ProductModel>();
-            foreach (var i in productsDataGridItems)
+            foreach (var i in CurrentSesseionInfo.BasketController.BasketItems)
             {
                 if (i.IsSelected == true)
                 {
@@ -72,8 +52,7 @@ namespace SmartphoneShop.View
                 return;
             }
 
-            String result = CurrentSesseionInfo.BasketController.BuyAll();
-            refreshProductsDataGridItems();
+            String result = CurrentSesseionInfo.BasketController.Buy();
             MessageBox.Show(result, "Сообщение", MessageBoxButton.OK, MessageBoxImage.None);
         }
     }
