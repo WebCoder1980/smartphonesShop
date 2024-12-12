@@ -21,7 +21,7 @@ namespace SmartphoneShop
         const String APP_PREFIX = "MProducts - ";
 
         SesseionInfo sesseionInfo;
-        IBasketController basketController;
+        BasketController basketController;
 
         public MainWindow()
         {

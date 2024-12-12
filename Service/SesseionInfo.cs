@@ -12,7 +12,7 @@ namespace SmartphoneShop.Service
 {
     public class SesseionInfo
     {
-        public IBasketController BasketController { get; set; }
+        public BasketController BasketController { get; set; }
         public ProductService ProductServ { get; set; }
 
         public DbService DatabaseService { get; set; }
@@ -27,7 +27,7 @@ namespace SmartphoneShop.Service
             DatabaseService = new DbService();
 
             ProductServ = new ProductService(this);
-            BasketController = new BasketGuestControoler(this);
+            BasketController = new BasketController(this);
 
             CurrentUser = null;
         }
@@ -38,8 +38,6 @@ namespace SmartphoneShop.Service
             
             ParentWindow.LoginEvent(name);
             ParentWindow.toProductsPage(null, null);
-
-            BasketController = new BasketUserController((BasketGuestControoler) BasketController);
         }
 
         public void Register(String name, String password)
@@ -54,8 +52,6 @@ namespace SmartphoneShop.Service
             CurrentUser = null;
 
             ParentWindow.LogoutEvent("гость");
-
-            BasketController = new BasketGuestControoler((BasketUserController)BasketController);
         }
     }
 }
