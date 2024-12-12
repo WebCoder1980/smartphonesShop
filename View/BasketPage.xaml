@@ -19,5 +19,6 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Купить" Click="buyButtonClicked" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Удалить" Click="deleteButtonClicked" HorizontalAlignment="Left" Height="43" Margin="167,347,0,0" VerticalAlignment="Top" Width="152"/>
     </Grid>
 </Page>

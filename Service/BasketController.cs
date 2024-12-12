@@ -53,5 +53,11 @@ namespace SmartphoneShop.Service
             BasketItems.Where(i => i.IsSelected == true).ToList().All(i => BasketItems.Remove(i));
             return "Куплено!";
         }
+
+        public String Delete()
+        {
+            BasketItems.Where(i => i.IsSelected == true).ToList().All(i => BasketItems.Remove(i));
+            return "Удалено!";
+        }
     }
 }

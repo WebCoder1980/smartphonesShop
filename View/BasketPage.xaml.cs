@@ -54,5 +54,26 @@ namespace SmartphoneShop.View
             String result = CurrentSesseionInfo.BasketController.Buy();
             MessageBox.Show(result, "Сообщение", MessageBoxButton.OK, MessageBoxImage.None);
         }
+
+        private void deleteButtonClicked(object sender, RoutedEventArgs e)
+        {
+            List<ProductModel> selectedProducts = new List<ProductModel>();
+            foreach (var i in CurrentSesseionInfo.BasketController.BasketItems)
+            {
+                if (i.IsSelected == true)
+                {
+                    selectedProducts.Add(new ProductModel(i));
+                }
+            }
+
+            if (selectedProducts.Count() == 0)
+            {
+                MessageBox.Show("Ни один продукт не был выбран", "Предупреждение", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            String result = CurrentSesseionInfo.BasketController.Delete();
+            MessageBox.Show(result, "Сообщение", MessageBoxButton.OK, MessageBoxImage.None);
+        }
     }
 }
