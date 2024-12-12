@@ -27,11 +27,22 @@ namespace SmartphoneShop.Service
             BasketItems = lastBasketController.BasketItems;
         }
 
-        public void AddItems(ObservableCollection<ProductDataGridItem> basketItems)
+        public void AddItems(ObservableCollection<ProductDataGridItem> newItems)
         {
-            foreach (var i in basketItems)
+            foreach (var i in newItems)
             {
-                BasketItems.Add(i);
+                if (BasketItems.Where(j => j.Id == i.Id).Count() == 0)
+                {
+                    BasketItems.Add(i);
+                    continue;
+                }
+                foreach (var j in BasketItems)
+                {
+                    if (i.Id == j.Id)
+                    {
+                        j.Count = (Int32.Parse(i.Count) + Int32.Parse(j.Count)).ToString();
+                    }
+                }
             }
         }
 
