@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using ProductCatalog.Model;
 using SmartphoneShop.Model;
 
-namespace ProductCatalog.Service
+namespace SmartphoneShop.Repository
 {
     internal class DbContextService : DbContext
     {

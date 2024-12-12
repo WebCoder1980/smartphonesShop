@@ -1,5 +1,4 @@
 ﻿using ProductCatalog.Model;
-using ProductCatalog.Service;
 using SmartphoneShop.Control;
 using SmartphoneShop.Model;
 using SmartphoneShop.Service;
@@ -17,7 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Shapes; 
 
 namespace SmartphoneShop.View
 {

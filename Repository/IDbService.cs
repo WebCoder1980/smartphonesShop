@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductCatalog.Service
+namespace SmartphoneShop.Repository
 {
     internal interface IDbService
     {
         public List<ProductModel> getAllProducts();
         public void AddBasketItems(List<BasketItemModel> basketItems);
-        public UserModel login(String name, String password);
-        public void register(String name, String password);
+        public UserModel login(string name, string password);
+        public void register(string name, string password);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ProductCatalog.Model;
-using ProductCatalog.Service;
 using SmartphoneShop.Control;
 using SmartphoneShop.Service;
 using System;

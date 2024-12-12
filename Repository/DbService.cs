@@ -6,11 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductCatalog.Service
+namespace SmartphoneShop.Repository
 {
     public class DbService : IDbService
     {
-        public List<ProductModel> getAllProducts() {
+        public List<ProductModel> getAllProducts()
+        {
             List<ProductModel> result;
             using (DbContextService db = new DbContextService())
             {
@@ -29,7 +30,7 @@ namespace ProductCatalog.Service
             }
         }
 
-        public UserModel login(String name, String password)
+        public UserModel login(string name, string password)
         {
             using (DbContextService db = new DbContextService())
             {
@@ -43,7 +44,7 @@ namespace ProductCatalog.Service
             }
         }
 
-        public void register(String name, String password)
+        public void register(string name, string password)
         {
             using (DbContextService db = new DbContextService())
             {
