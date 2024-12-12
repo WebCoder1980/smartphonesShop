@@ -13,10 +13,36 @@ namespace SmartphoneShop.Service
     public class BasketController
     {
         public SesseionInfo CurrentSesseionInfo { get; set; }
-        public ObservableCollection<ProductDataGridItem> BasketItems { get; set; }
+
+        private ObservableCollection<ProductDataGridItem> basketItems;
+        public ObservableCollection<ProductDataGridItem> BasketItems
+        {
+            get
+            {
+                if (IsUserItems == false && CurrentSesseionInfo.CurrentUser != null)
+                {
+                    IsUserItems = true;
+                    ObservableCollection<ProductDataGridItem> tmpCollection = new ObservableCollection<ProductDataGridItem>();
+                    foreach (var i in CurrentSesseionInfo.DatabaseService.GetBasketItems(CurrentSesseionInfo.CurrentUser.id))
+                    {
+                        tmpCollection.Add(new ProductDataGridItem(i));
+                    }
+                    AddItems(tmpCollection);
+                }
+                return basketItems;
+            }
+
+            set
+            {
+                basketItems = value;
+            }
+        }
+
+        bool IsUserItems { get; set; }
         public BasketController(SesseionInfo CurrentSesseionInfo) {
             this.CurrentSesseionInfo = CurrentSesseionInfo;
             BasketItems = new ObservableCollection<ProductDataGridItem>();
+            IsUserItems = false;
         }
 
         public void AddItems(ObservableCollection<ProductDataGridItem> newItems)
@@ -36,11 +62,6 @@ namespace SmartphoneShop.Service
                     }
                 }
             }
-        }
-
-        public ObservableCollection<ProductDataGridItem> GetItems()
-        {
-            return BasketItems;
         }
 
         public String Buy()

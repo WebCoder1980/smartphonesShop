@@ -1,4 +1,5 @@
 ﻿using ProductCatalog.Model;
+using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

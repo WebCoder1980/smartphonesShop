@@ -1,4 +1,5 @@
 ﻿using SmartphoneShop.Control;
+using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace ProductCatalog.Model
         public string name { get; set; }
         public double price { get; set; }
         public int count { get; set; }
+
+        public ICollection<BasketItemModel> BasketItems { get; set; }
 
         public ProductModel(int id, string name, double price, int count)
         {

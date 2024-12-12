@@ -20,7 +20,7 @@ namespace SmartphoneShop.Repository
         public DbSet<UserRoleModel> userroles { get; set; } = null!;
         public DbSet<UserModel> users { get; set; } = null!;
         public DbSet<ProductModel> products { get; set; } = null!;
-        public DbSet<BasketItemModel> basketItems { get; set; } = null!;
+        public DbSet<BasketItemModel> basketitems { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
