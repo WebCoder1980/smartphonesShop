@@ -58,9 +58,8 @@ namespace SmartphoneShop
 
         public void toAdminPage(object sender, RoutedEventArgs e)
         {
-            throw new Exception("Админ панель ещё недоступна");
-            //MainFrame.Navigate();
-            //Title = APP_PREFIX + "зарегистрироваться";
+            MainFrame.Navigate(new AdminPage(sesseionInfo));
+            Title = APP_PREFIX + "администрирование";
         }
 
         public void logout(object sender, RoutedEventArgs e)
