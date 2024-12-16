@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace SmartphoneShop.Repository
 {
-    public class DbService : IDbService
+    public class DbService
     {
         public List<ProductModel> getAllProducts()
         {
