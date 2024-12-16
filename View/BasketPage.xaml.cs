@@ -32,6 +32,8 @@ namespace SmartphoneShop.View
             CurrentSesseionInfo = sessionInfo;
 
             productsDataGrid.ItemsSource = CurrentSesseionInfo.BasketController.BasketItems;
+
+            CurrentSesseionInfo.BasketController.RefreshDataGrid();
         }
 
         private void buyButtonClicked(object sender, RoutedEventArgs e)

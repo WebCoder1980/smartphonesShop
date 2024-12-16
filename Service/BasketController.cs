@@ -1,5 +1,6 @@
 ﻿using ProductCatalog.Model;
 using SmartphoneShop.Control;
+using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,55 +14,36 @@ namespace SmartphoneShop.Service
     public class BasketController
     {
         public SesseionInfo CurrentSesseionInfo { get; set; }
+        public ObservableCollection<ProductDataGridItem> BasketItems { get; set; }
 
-        private ObservableCollection<ProductDataGridItem> basketItems;
-        public ObservableCollection<ProductDataGridItem> BasketItems
-        {
-            get
-            {
-                if (IsUserItems == false && CurrentSesseionInfo.CurrentUser != null)
-                {
-                    IsUserItems = true;
-                    ObservableCollection<ProductDataGridItem> tmpCollection = new ObservableCollection<ProductDataGridItem>();
-                    foreach (var i in CurrentSesseionInfo.DatabaseService.GetBasketItems(CurrentSesseionInfo.CurrentUser.id))
-                    {
-                        tmpCollection.Add(new ProductDataGridItem(i));
-                    }
-                    AddItems(tmpCollection);
-                }
-                return basketItems;
-            }
-
-            set
-            {
-                basketItems = value;
-            }
-        }
-
-        bool IsUserItems { get; set; }
         public BasketController(SesseionInfo CurrentSesseionInfo) {
             this.CurrentSesseionInfo = CurrentSesseionInfo;
             BasketItems = new ObservableCollection<ProductDataGridItem>();
-            IsUserItems = false;
+        }
+
+        public void RefreshDataGrid()
+        {
+            BasketItems.Clear();
+            foreach (var i in CurrentSesseionInfo.DatabaseService.GetBasketItems(CurrentSesseionInfo.CurrentUser.id))
+            {
+                BasketItems.Add(new ProductDataGridItem(i));
+            }
         }
 
         public void AddItems(ObservableCollection<ProductDataGridItem> newItems)
         {
+            List<BasketItemModel> newItems2 = new List<BasketItemModel>();
+
             foreach (var i in newItems)
             {
-                if (BasketItems.Where(j => j.Id == i.Id).Count() == 0)
-                {
-                    BasketItems.Add(i);
-                    continue;
-                }
-                foreach (var j in BasketItems)
-                {
-                    if (i.Id == j.Id)
-                    {
-                        j.Count = (Int32.Parse(i.Count) + Int32.Parse(j.Count)).ToString();
-                    }
-                }
+                BasketItemModel newModel = new BasketItemModel();
+                newModel.userid = CurrentSesseionInfo.CurrentUser.id;
+                newModel.productid = Int32.Parse(i.Id);
+                newModel.count = 1;
+                newItems2.Add(newModel);
             }
+
+            CurrentSesseionInfo.DatabaseService.AddBasketItems(newItems2);
         }
 
         public String Buy()

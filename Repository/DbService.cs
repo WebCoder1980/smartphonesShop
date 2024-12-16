@@ -1,4 +1,5 @@
-﻿using ProductCatalog.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using ProductCatalog.Model;
 using SmartphoneShop.Model;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Media3D.Converters;
 
 namespace SmartphoneShop.Repository
 {
@@ -16,7 +18,7 @@ namespace SmartphoneShop.Repository
             List<ProductModel> result;
             using (DbContextService db = new DbContextService())
             {
-                result = db.products.Where(p => p.count > 0).ToList();
+                result = db.products.Where(p => p.count > 0).OrderBy(b => b.id).ToList();
             }
 
             return result;
@@ -38,16 +40,25 @@ namespace SmartphoneShop.Repository
 
                     db.Entry(item).Reference(b => b.product).Load();
                 }
-                result = tmpList.Select(b => new ProductModel(b.product.id, b.product.name, b.product.price, b.product.count)).ToList();
+                result = tmpList.Select(b => new ProductModel(b.product.id, b.product.name, b.product.price, b.count)).OrderBy(b => b.id).ToList();
             }
 
             return result;
         }
-        public void AddBasketItems(List<BasketItemModel> basketItems)
+        public void AddBasketItems(List<BasketItemModel> newItems)
         {
             using (DbContextService db = new DbContextService())
             {
-                db.basketitems.AddRange(basketItems);
+                foreach (var i in newItems)
+                {
+                    if (db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).Count() == 0)
+                    {
+                        db.basketitems.Add(i);
+                        continue;
+                    }
+
+                    db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.count, k => k.count + i.count));
+                }
                 db.SaveChanges();
             }
         }

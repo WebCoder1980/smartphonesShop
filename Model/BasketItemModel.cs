@@ -15,6 +15,8 @@ namespace SmartphoneShop.Model
         public int productid { get; set; }
         public bool isbougth { get; set; }
 
+        public int count { get; set; }
+
         [ForeignKey("userid")]
         public UserModel user { get; set; }
         [ForeignKey("productid")]

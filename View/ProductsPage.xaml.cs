@@ -38,6 +38,12 @@ namespace SmartphoneShop.View
 
         private void toBasketButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (sesseionInfo.CurrentUser == null)
+            {
+                MessageBox.Show("Войдите в систему что бы добавлять товары в корзину!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             List<ProductModel> selectedProducts = new List<ProductModel>();
             foreach (var i in sesseionInfo.ProductServ.ProductsItems)
             {
