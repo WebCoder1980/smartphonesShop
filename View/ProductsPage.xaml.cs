@@ -70,7 +70,7 @@ namespace SmartphoneShop.View
 
             foreach (var i in selectedProducts)
             {
-                i.count = 1;
+                i.count = addCount;
                 selectedProductsGridItems.Add(new ProductDataGridItem(i));
             }
 

@@ -39,7 +39,7 @@ namespace SmartphoneShop.Service
                 BasketItemModel newModel = new BasketItemModel();
                 newModel.userid = CurrentSesseionInfo.CurrentUser.id;
                 newModel.productid = Int32.Parse(i.Id);
-                newModel.count = 1;
+                newModel.count = Int32.Parse(i.Count);
                 newItems2.Add(newModel);
             }
 
@@ -48,18 +48,47 @@ namespace SmartphoneShop.Service
 
         public String Buy()
         {
-            if (CurrentSesseionInfo.CurrentUser == null)
+            List<BasketItemModel> newItems = new List<BasketItemModel>();
+
+            foreach (var i in BasketItems.Where(i => i.IsSelected == true).ToList())
             {
-                return "Войдите в систему, что бы купить!";
+                BasketItemModel newModel = new BasketItemModel();
+
+                newModel.userid = CurrentSesseionInfo.CurrentUser.id;
+                newModel.productid = Int32.Parse(i.Id);
+                newModel.count = Int32.Parse(i.Count);
+
+                newItems.Add(newModel);
             }
 
-            BasketItems.Where(i => i.IsSelected == true).ToList().All(i => BasketItems.Remove(i));
+            CurrentSesseionInfo.DatabaseService.BuyBasketItems(newItems);
+
+            RefreshDataGrid();
+
+
             return "Куплено!";
         }
 
         public String Delete()
         {
-            BasketItems.Where(i => i.IsSelected == true).ToList().All(i => BasketItems.Remove(i));
+            List<BasketItemModel> newItems = new List<BasketItemModel>();
+
+            foreach (var i in BasketItems.Where(i => i.IsSelected == true).ToList())
+            {
+                BasketItemModel newModel = new BasketItemModel();
+
+                newModel.userid = CurrentSesseionInfo.CurrentUser.id;
+                newModel.productid = Int32.Parse(i.Id);
+                newModel.count = Int32.Parse(i.Count);
+
+                newItems.Add(newModel);
+            }
+
+            CurrentSesseionInfo.DatabaseService.DeleteBasketItems(newItems);
+
+            RefreshDataGrid();
+
+
             return "Удалено!";
         }
     }

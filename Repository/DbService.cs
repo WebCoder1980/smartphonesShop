@@ -63,6 +63,30 @@ namespace SmartphoneShop.Repository
             }
         }
 
+        public void BuyBasketItems(List<BasketItemModel> items)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                foreach (var i in items)
+                {
+                    db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.isbougth, k => true));
+                }
+                db.SaveChanges();
+            }
+        }
+
+        public void DeleteBasketItems(List<BasketItemModel> items)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                foreach (var i in items)
+                {
+                    db.basketitems.RemoveRange(db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ToList());
+                }
+                db.SaveChanges();
+            }
+        }
+
         public UserModel login(string name, string password)
         {
             using (DbContextService db = new DbContextService())
