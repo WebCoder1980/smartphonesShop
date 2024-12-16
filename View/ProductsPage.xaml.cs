@@ -38,6 +38,12 @@ namespace SmartphoneShop.View
 
         private void toBasketButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (!Int32.TryParse(selectCountTextBox.Text, out int addCount))
+            {
+                MessageBox.Show("В поле \"Колличество\" нужно вводить только число!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (sesseionInfo.CurrentUser == null)
             {
                 MessageBox.Show("Войдите в систему что бы добавлять товары в корзину!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

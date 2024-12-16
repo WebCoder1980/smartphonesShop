@@ -19,5 +19,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Добавить в корзину" Click="toBasketButtonClicked" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
+        <Label Content="Колличество:" HorizontalAlignment="Left" Margin="167,356,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="selectCountTextBox" HorizontalAlignment="Left" Height="20" Margin="255,359,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="70"/>
     </Grid>
 </Page>

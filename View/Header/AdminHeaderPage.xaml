@@ -1,0 +1,19 @@
+﻿<Page x:Class="SmartphoneShop.View.Header.AdminHeaderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SmartphoneShop.View.Header"
+      mc:Ignorable="d" 
+      d:DesignHeight="100" d:DesignWidth="1000"
+      Title="AdminHeaderPage">
+
+    <Grid>
+        <Button x:Name="logoutButton" Content="Выйти" Click="logout" HorizontalAlignment="Left" Height="40" Margin="878,10,0,0" VerticalAlignment="Top" Width="112" Visibility="Visible"/>
+        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="481,11,0,0" VerticalAlignment="Top" Width="392" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Каталог" Click="toProductsPage" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Корзина" Click="toBasketPage" HorizontalAlignment="Left" Height="40" Margin="167,10,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button Content="Админ панель" Click="toAdminPage" HorizontalAlignment="Left" Height="40" Margin="3
+                24,10,0,0" VerticalAlignment="Top" Width="152" Visibility="Visible"/>
+    </Grid>
+</Page>

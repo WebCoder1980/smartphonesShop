@@ -1,5 +1,6 @@
 ﻿using SmartphoneShop.Service;
 using SmartphoneShop.View;
+using SmartphoneShop.View.Header;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,6 +30,8 @@ namespace SmartphoneShop
 
             sesseionInfo = new SesseionInfo(this);
 
+            HeaderFrame.Navigate(new UnauthorizedHeaderPage(sesseionInfo, "привет, гость"));
+            LogoutEvent("гость");
             toProductsPage(null, null);
         }
 
@@ -65,24 +68,17 @@ namespace SmartphoneShop
         public void logout(object sender, RoutedEventArgs e)
         {
             sesseionInfo.Logout();
+            toLoginPage(null, null);
         }
 
         public void LoginEvent(String newName)
         {
-            userLabel.Content = "Привет, " + newName;
-
-            loginButton.Visibility = Visibility.Hidden;
-            registerButton.Visibility = Visibility.Hidden;
-            logoutButton.Visibility = Visibility.Visible;
+            HeaderFrame.Navigate(new AuthorizedHeaderPage(sesseionInfo, "Привет, " + newName));
         }
 
         public void LogoutEvent(String newName)
         {
-            userLabel.Content = "Привет, " + newName;
-
-            loginButton.Visibility = Visibility.Visible;
-            registerButton.Visibility = Visibility.Visible;
-            logoutButton.Visibility = Visibility.Hidden;
+            HeaderFrame.Navigate(new UnauthorizedHeaderPage(sesseionInfo, "Привет, " + newName));
         }
     }
 }
