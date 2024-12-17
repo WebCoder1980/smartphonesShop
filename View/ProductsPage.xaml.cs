@@ -45,6 +45,12 @@ namespace SmartphoneShop.View
                 return;
             }
 
+            if (!(addCount > 0))
+            {
+                MessageBox.Show("В поле \"Колличество\" нужно вводить только положительное колличество!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (sesseionInfo.CurrentUser == null)
             {
                 MessageBox.Show("Войдите в систему что бы добавлять товары в корзину!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
