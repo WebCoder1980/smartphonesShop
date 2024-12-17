@@ -32,7 +32,7 @@ namespace SmartphoneShop.Repository
             {
                 List<BasketItemModel> tmpList = new List<BasketItemModel>();
 
-                tmpList = db.basketitems.Where(p => p.isbougth == false).ToList();
+                tmpList = db.basketitems.Where(p => p.userid == userId && p.isbougth == false).ToList();
 
                 foreach (var item in tmpList)
                 {
