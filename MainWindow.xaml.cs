@@ -73,7 +73,17 @@ namespace SmartphoneShop
 
         public void LoginEvent(String newName)
         {
+            if (sesseionInfo.CurrentUser.role == 1)
+            {
+                AdminEvent(newName);
+                return;
+            }
             HeaderFrame.Navigate(new AuthorizedHeaderPage(sesseionInfo, "Привет, " + newName));
+        }
+
+        public void AdminEvent(String newName)
+        {
+            HeaderFrame.Navigate(new AdminHeaderPage(sesseionInfo, "Привет, " + newName));
         }
 
         public void LogoutEvent(String newName)

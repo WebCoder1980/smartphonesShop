@@ -13,7 +13,6 @@
         <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="481,11,0,0" VerticalAlignment="Top" Width="392" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Button Content="Каталог" Click="toProductsPage" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
         <Button Content="Корзина" Click="toBasketPage" HorizontalAlignment="Left" Height="40" Margin="167,10,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button Content="Админ панель" Click="toAdminPage" HorizontalAlignment="Left" Height="40" Margin="3
-                24,10,0,0" VerticalAlignment="Top" Width="152" Visibility="Visible"/>
+        <Button Content="Админ панель" Click="toAdminPage" HorizontalAlignment="Left" Height="40" Margin="324,10,0,0" VerticalAlignment="Top" Width="152" Visibility="Visible"/>
     </Grid>
 </Page>

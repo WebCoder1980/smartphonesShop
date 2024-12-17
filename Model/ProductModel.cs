@@ -17,6 +17,11 @@ namespace ProductCatalog.Model
 
         public ICollection<BasketItemModel> BasketItems { get; set; }
 
+        public ProductModel()
+        {
+
+        }
+
         public ProductModel(int id, string name, double price, int count)
         {
             this.id = id;

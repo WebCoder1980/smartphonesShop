@@ -14,13 +14,13 @@ namespace SmartphoneShop.Service
     {
         public BasketController BasketController { get; set; }
         public ProductService ProductServ { get; set; }
+        public AdminService AdminServ { get; set; }
 
         public DbService DatabaseService { get; set; }
 
         public UserModel CurrentUser { get; set; }
 
         public MainWindow ParentWindow { get; set; }
-
         public SesseionInfo(MainWindow mainWindow)
         {
             ParentWindow = mainWindow;
@@ -28,6 +28,7 @@ namespace SmartphoneShop.Service
 
             ProductServ = new ProductService(this);
             BasketController = new BasketController(this);
+            AdminServ = new AdminService(this);
 
             CurrentUser = null;
         }

@@ -25,8 +25,8 @@ namespace SmartphoneShop.View.Header
 
         public AdminHeaderPage(SesseionInfo CurrentSesseionInfo, String userLabelName)
         {
-            this.CurrentSesseionInfo = CurrentSesseionInfo;
             InitializeComponent();
+            this.CurrentSesseionInfo = CurrentSesseionInfo;
 
             userLabel.Content = userLabelName;
         }

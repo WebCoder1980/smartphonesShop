@@ -24,7 +24,17 @@ namespace SmartphoneShop.Service
         public void getAll() {
             ProductsItems.Clear();
 
-            foreach (var i in CurrentSesseionInfo.DatabaseService.getAllProducts())
+            List<ProductModel> products;
+            if (CurrentSesseionInfo.CurrentUser != null && CurrentSesseionInfo.CurrentUser.role == 1)
+            {
+                products = CurrentSesseionInfo.DatabaseService.getAllProducts();
+            }
+            else
+            {
+                products = CurrentSesseionInfo.DatabaseService.getAvailableProducts();
+            }
+
+            foreach (var i in products)
             {
                 ProductsItems.Add(new ProductDataGridItem(i));
             }

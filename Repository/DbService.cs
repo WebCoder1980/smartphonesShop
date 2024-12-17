@@ -18,6 +18,17 @@ namespace SmartphoneShop.Repository
             List<ProductModel> result;
             using (DbContextService db = new DbContextService())
             {
+                result = db.products.OrderBy(b => b.id).ToList();
+            }
+
+            return result;
+        }
+
+        public List<ProductModel> getAvailableProducts()
+        {
+            List<ProductModel> result;
+            using (DbContextService db = new DbContextService())
+            {
                 result = db.products.Where(p => p.count > 0).OrderBy(b => b.id).ToList();
             }
 
@@ -147,6 +158,34 @@ namespace SmartphoneShop.Repository
                 db.users.Add(newUser);
 
                 db.SaveChanges();
+            }
+        }
+
+        public ProductModel GetProduct(int id)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                return db.products.SingleOrDefault(p => p.id == id);
+            }
+        }
+
+        public bool UpdateProduct(ProductModel newModel)
+        {
+            using (DbContextService db = new DbContextService())
+            {
+                ProductModel currentModel = db.products.SingleOrDefault(p => p.id == newModel.id);
+                if (currentModel == null)
+                {
+                    return false;
+                }
+
+                currentModel.price = newModel.price;
+                currentModel.count = newModel.count;
+                currentModel.name = newModel.name;
+
+                db.SaveChanges();
+
+                return true;
             }
         }
     }
