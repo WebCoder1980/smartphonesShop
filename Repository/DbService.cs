@@ -51,7 +51,7 @@ namespace SmartphoneShop.Repository
             {
                 foreach (var i in newItems)
                 {
-                    if (db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).Count() == 0)
+                    if (db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid && j.isbougth == false).Count() == 0)
                     {
                         db.basketitems.Add(i);
                         continue;
@@ -70,6 +70,7 @@ namespace SmartphoneShop.Repository
                 foreach (var i in items)
                 {
                     db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.isbougth, k => true));
+                    db.products.Where(j => j.id == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.count, k => k.count - i.count));
                 }
                 db.SaveChanges();
             }
@@ -81,7 +82,7 @@ namespace SmartphoneShop.Repository
             {
                 foreach (var i in items)
                 {
-                    db.basketitems.RemoveRange(db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ToList());
+                    db.basketitems.RemoveRange(db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid && j.isbougth == false).ToList());
                 }
                 db.SaveChanges();
             }
