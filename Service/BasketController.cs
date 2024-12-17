@@ -61,7 +61,12 @@ namespace SmartphoneShop.Service
                 newItems.Add(newModel);
             }
 
-            CurrentSesseionInfo.DatabaseService.BuyBasketItems(newItems);
+            String result = CurrentSesseionInfo.DatabaseService.BuyBasketItems(newItems);
+
+            if (result != null)
+            {
+                return result;
+            }
 
             RefreshDataGrid();
 

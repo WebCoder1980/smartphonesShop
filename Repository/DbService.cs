@@ -63,16 +63,40 @@ namespace SmartphoneShop.Repository
             }
         }
 
-        public void BuyBasketItems(List<BasketItemModel> items)
+        public String? BuyBasketItems(List<BasketItemModel> items)
         {
             using (DbContextService db = new DbContextService())
             {
-                foreach (var i in items)
+                using (var transaction = db.Database.BeginTransaction())
                 {
-                    db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.isbougth, k => true));
-                    db.products.Where(j => j.id == i.productid).ExecuteUpdate(j => j.SetProperty(k => k.count, k => k.count - i.count));
+                    try
+                    {
+                        foreach (var i in items)
+                        {
+                            var product = db.products.SingleOrDefault(p => p.id == i.productid);
+                            if (product == null || product.count < i.count)
+                            {
+                                throw new Exception($"Недостаточно товара с id {i.productid}. Доступно: {product.count}, требуется: {i.count}");
+                            }
+
+                            db.basketitems.Where(j => j.userid == i.userid && j.productid == i.productid)
+                                .ExecuteUpdate(j => j.SetProperty(k => k.isbougth, k => true));
+
+                            db.products.Where(j => j.id == i.productid)
+                                .ExecuteUpdate(j => j.SetProperty(k => k.count, k => k.count - i.count));
+                        }
+
+                        db.SaveChanges();
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        return $"Покупка отменена: {ex.Message}";
+                    }
+
+                    return null;
                 }
-                db.SaveChanges();
             }
         }
 
