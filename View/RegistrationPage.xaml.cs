@@ -22,17 +22,24 @@ namespace SmartphoneShop.View
     public partial class RegistrationPage : Page
     {
         SesseionInfo CurrentSessionInfo { get; set; }
+
+        (String, int) Captcha { get; set; }
+
         public RegistrationPage(SesseionInfo sesseion)
         {
             InitializeComponent();
 
             CurrentSessionInfo = sesseion;
+
+            Captcha = CaptchaService.Get();
+            captchaLabel.Content = Captcha.Item1;
         }
 
         public void registerButton_clicked(object sender, RoutedEventArgs e)
         {
             String login, password, password2, captha;
             login = loginTextBox.Text;
+
             if (!login.All(char.IsLetterOrDigit))
             {
                 MessageBox.Show("В логине можно использовать только буквы или цифры!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -59,7 +66,18 @@ namespace SmartphoneShop.View
             }
 
             captha = captchaTextBox.Text;
-            if (captha != "7")
+            int capthaNum;
+            try
+            {
+                capthaNum = Int32.Parse(captha);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Неправильная капча!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (capthaNum != Captcha.Item2)
             {
                 MessageBox.Show("Капча неверная!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

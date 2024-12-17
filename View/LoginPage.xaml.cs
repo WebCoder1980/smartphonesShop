@@ -22,11 +22,16 @@ namespace SmartphoneShop.View
     public partial class LoginPage : Page
     {
         SesseionInfo CurrentSesseionInfo { get; set; }
+
+        (String, int) Captcha { get; set; }
         public LoginPage(SesseionInfo sesseion)
         {
             InitializeComponent();
 
             CurrentSesseionInfo = sesseion;
+
+            Captcha = CaptchaService.Get();
+            captchaLabel.Content = Captcha.Item1;
         }
 
         private void loginButton_clicked(object sender, RoutedEventArgs e)
@@ -47,7 +52,7 @@ namespace SmartphoneShop.View
                 return;
             }
 
-            if (capthaNum != 7)
+            if (capthaNum != Captcha.Item2)
             {
                 MessageBox.Show("Неправильная капча!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
