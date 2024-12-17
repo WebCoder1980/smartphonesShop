@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SmartphoneShop"
         mc:Ignorable="d"
-        Title="" Height="550" Width="1050">
+        Title="" Height="550" Width="1050" ResizeMode="NoResize">
     <Grid>
         <Grid Margin="0,0,0,300">
             <Frame x:Name="HeaderFrame" NavigationUIVisibility="Hidden"/>
