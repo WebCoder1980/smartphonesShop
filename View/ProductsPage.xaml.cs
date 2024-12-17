@@ -34,6 +34,7 @@ namespace SmartphoneShop.View
 
 
             productsDataGrid.ItemsSource = sesseionInfo.ProductServ.ProductsItems;
+            sesseionInfo.ProductServ.getAll();
         }
 
         private void toBasketButtonClicked(object sender, RoutedEventArgs e)
