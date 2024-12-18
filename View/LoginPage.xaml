@@ -17,7 +17,7 @@
         <TextBox x:Name="capthaTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="333,202,0,0" VerticalAlignment="Top" Width="264" Height="30"/>
 
         <Border CornerRadius="15" Background="White" Margin="333,256,403,104">
-            <Button Content="Войти" Click="loginButton_clicked" Style="{StaticResource menuButton}" FontWeight="Bold" Background="Transparent" Foreground="Black" BorderBrush="Transparent"/>
+            <Button Content="Войти" Click="loginButton_clicked" Style="{StaticResource menuButton}" FontWeight="Bold" Foreground="Black" BorderBrush="Transparent"/>
         </Border>
     </Grid>
 </Page>

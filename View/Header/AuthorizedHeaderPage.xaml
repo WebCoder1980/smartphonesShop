@@ -9,18 +9,17 @@
       Title="AuthorizedHeaderPage">
 
     <Grid>
-        <Border CornerRadius="15" Background="White" Margin="770,0,0,42">
-            <Button x:Name="logoutButton" Style="{StaticResource menuButton}" Content="Выйти" Click="logout" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold"/>
+
+        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="50" Margin="320,10,0,0" VerticalAlignment="Top" Width="468" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Foreground="White"/>
+        <Border CornerRadius="15" Background="White" Margin="793,10,10,40">
+            <Button x:Name="logoutButton" Style="{StaticResource menuButton}" Content="Выйти" Click="logout" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
+        </Border>
+        <Border CornerRadius="15" Background="White" Margin="10,10,840,40">
+            <Button Style="{StaticResource menuButton}" Content="Каталог" Click="toProductsPage" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
         </Border>
 
-        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="452,11,0,0" VerticalAlignment="Top" Width="287" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-
-        <Border CornerRadius="15" Background="White" Margin="0,0,812,42">
-            <Button Content="Каталог" Style="{StaticResource menuButton}" Click="toProductsPage" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="168" Foreground="Black" FontWeight="Bold"/>
-        </Border>
-
-        <Border CornerRadius="15" Background="White" Margin="193,0,641,42">
-            <Button Content="Корзина" Style="{StaticResource menuButton}" Click="toBasketPage" HorizontalAlignment="Center" Height="40" Margin="0,10,0,0" VerticalAlignment="Top" Width="166" Foreground="Black" FontWeight="Bold"/>
+        <Border CornerRadius="15" Background="White" Margin="165,10,685,40">
+            <Button Style="{StaticResource menuButton}" Content="Корзина" Click="toBasketPage" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
         </Border>
     </Grid>
 </Page>

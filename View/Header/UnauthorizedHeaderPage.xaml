@@ -19,7 +19,7 @@
 
         <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="167,11,0,0" VerticalAlignment="Top" Width="414" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Foreground="White"/>
 
-        <Border CornerRadius="15" Background="White" Margin="10,10,838,49">
+        <Border CornerRadius="15" Background="White" Margin="10,10,840,49">
             <Button Style="{StaticResource menuButton}" Content="Каталог" Click="toProductsPage" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
         </Border>
     </Grid>
