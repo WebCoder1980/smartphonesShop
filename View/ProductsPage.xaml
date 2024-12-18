@@ -9,7 +9,7 @@
       Title="ProductsPage">
 
     <Grid>
-        <DataGrid x:Name="productsDataGrid" HorizontalAlignment="Center" Height="340" VerticalAlignment="Top" Width="980" d:ItemsSource="{Binding Items}" AutoGenerateColumns="False">
+        <DataGrid  x:Name="productsDataGrid" HorizontalAlignment="Center" Height="340" VerticalAlignment="Top" Width="980" d:ItemsSource="{Binding Items}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{Binding IsSelected}"/>
                 <DataGridTextColumn Header="№" IsReadOnly="True" Binding="{Binding Id}"/>
@@ -18,8 +18,12 @@
                 <DataGridTextColumn Header="Название" IsReadOnly="True" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить в корзину" Click="toBasketButtonClicked" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
-        <Label Content="Колличество:" HorizontalAlignment="Left" Margin="167,356,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="selectCountTextBox" HorizontalAlignment="Left" Height="20" Margin="255,359,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="70"/>
+
+        <Border CornerRadius="15" Background="White" Margin="10,345,789,7">
+            <Button Content="Добавить в корзину" Style="{StaticResource menuButton}" Click="toBasketButtonClicked" HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="181" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+        </Border>
+
+        <Label Content="Колличество:" HorizontalAlignment="Left" Margin="255,356,0,0" VerticalAlignment="Top" Width="141" FontSize="20" FontWeight="Bold"/>
+        <TextBox Style="{StaticResource searchTextbox}"  x:Name="selectCountTextBox" HorizontalAlignment="Left" Height="28" Margin="413,362,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="144"/>
     </Grid>
 </Page>

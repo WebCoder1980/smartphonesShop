@@ -3,15 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:SmartphoneShop"
         mc:Ignorable="d"
-        Title="" Height="550" Width="1050" ResizeMode="NoResize">
-    <Grid>
-        <Grid Margin="0,0,0,300">
-            <Frame x:Name="HeaderFrame" NavigationUIVisibility="Hidden"/>
+        Title="" Height="550" Width="1050" ResizeMode="NoResize" WindowStyle="None">
+
+    <Border Background="#67b200" CornerRadius="10">
+        <Grid>
+            <Button Click="close_CLick" Background="White" Margin="1006,10,10,509" Style="{StaticResource pagingButton}">
+                <Icon:PackIconMaterial Kind="close" Style="{StaticResource pagingButtonIcon}" Height="15" Width="15" HorizontalAlignment="Center"/>
+            </Button>
+
+            <Grid Margin="0,0,0,300">
+                <Frame x:Name="HeaderFrame" NavigationUIVisibility="Hidden"/>
+            </Grid>
+            <Grid Margin="0,82,0,0">
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+            </Grid>
         </Grid>
-        <Grid Margin="0,100,0,0">
-            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-        </Grid>
-    </Grid>
+    </Border>
+
 </Window>

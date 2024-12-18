@@ -51,14 +51,14 @@ namespace SmartphoneShop.View
                 return;
             }
 
-            password = passwordTextBox.Password;
+            password = passwordTextBox.Text;
             if (password.Length < 3)
             {
                 MessageBox.Show("В пароле нужны использовать хотя бы 3 символа!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            password2 = password2TextBox.Password;
+            password2 = password2TextBox.Text;
             if (password != password2)
             {
                 MessageBox.Show("Пароли не совпадают!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);

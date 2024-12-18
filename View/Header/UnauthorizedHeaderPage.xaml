@@ -9,9 +9,18 @@
       Title="UnauthorizedHeaderPage">
 
     <Grid>
-        <Button x:Name="registerButton" Content="Создать аккаунт" Click="toRegistrationPage" HorizontalAlignment="Left" Height="40" Margin="878,10,0,0" VerticalAlignment="Top" Width="112"/>
-        <Button x:Name="loginButton" Content="Войти" Click="toLoginPage" HorizontalAlignment="Left" Height="40" Margin="761,10,0,0" VerticalAlignment="Top" Width="112"/>
-        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="167,11,0,0" VerticalAlignment="Top" Width="589" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Каталог" Click="toProductsPage" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="152"/>
+        <Border CornerRadius="15" Background="White" Margin="793,10,10,49">
+            <Button x:Name="registerButton" Style="{StaticResource menuButton}" Content="Создать аккаунт" Click="toRegistrationPage" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
+        </Border>
+
+        <Border CornerRadius="15" Background="White" Margin="594,10,222,49">
+            <Button x:Name="loginButton" Content="Войти"  Style="{StaticResource menuButton}" Click="toLoginPage" HorizontalAlignment="Center" Height="41" VerticalAlignment="Center" Width="184" Foreground="Black" FontWeight="Bold" FontSize="20"/>
+        </Border>
+
+        <Label x:Name="userLabel" Content="Привет, гость!" HorizontalAlignment="Left" Height="40" Margin="167,11,0,0" VerticalAlignment="Top" Width="414" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Border CornerRadius="15" Background="White" Margin="10,10,838,49">
+            <Button Style="{StaticResource menuButton}" Content="Каталог" Click="toProductsPage" HorizontalAlignment="Center" Height="80" VerticalAlignment="Center" Width="167" Visibility="Visible" Foreground="Black" FontWeight="Bold" FontSize="18"/>
+        </Border>
     </Grid>
 </Page>

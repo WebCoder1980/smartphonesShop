@@ -5,19 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SmartphoneShop.View"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="1000"
+      d:DesignHeight="550" d:DesignWidth="1050"
       Title="RegistrationPage">
 
     <Grid>
-        <Label Content="Логин:" HorizontalAlignment="Left" Margin="48,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="loginTextBox" HorizontalAlignment="Left" Margin="48,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
-        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="48,144,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="48,170,0,0" VerticalAlignment="Top" Width="264"/>
-        <Label Content="Повторите пароль:" HorizontalAlignment="Left" Margin="48,196,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="password2TextBox" HorizontalAlignment="Left" Margin="48,222,0,0" VerticalAlignment="Top" Width="264"/>
-        <Label x:Name="captchaLabel" Content="Проверка: сколько будет 1 + 3 * 4/2?" HorizontalAlignment="Left" Margin="48,245,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="captchaTextBox" HorizontalAlignment="Left" Margin="48,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
-        <Button Click="registerButton_clicked" Content="Войти" HorizontalAlignment="Left" Height="28" Margin="48,293,0,0" VerticalAlignment="Top" Width="264"/>
-        <Image HorizontalAlignment="Left" Height="380" Margin="597,0,0,0" VerticalAlignment="Center" Width="316" Source="/Image/Image1.png"/>
+
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="48,24,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold" Height="34" Width="82"/>
+        <TextBox FontFamily="Arial" x:Name="loginTextBox" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="48,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Height="30"/>
+
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="48,98,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold" Height="35" Width="96"/>
+        <TextBox FontFamily="Arial" Style="{StaticResource searchTextbox}" x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="48,138,0,0" VerticalAlignment="Top" Width="264" Height="30"/>
+
+        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="48,179,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold" Height="53"/>
+        <TextBox Style="{StaticResource searchTextbox}" x:Name="password2TextBox" HorizontalAlignment="Left" Margin="48,215,0,0" VerticalAlignment="Top" Width="264" Height="34"/>
+
+        <Label x:Name="captchaLabel" Content="Cколько будет 1 + 3 * 4/2?" HorizontalAlignment="Left" Margin="48,260,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox Style="{StaticResource searchTextbox}" x:Name="captchaTextBox" HorizontalAlignment="Left" Margin="48,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="32"/>
+
+        <Border CornerRadius="15" Background="White" Margin="48,359,732,129">
+            <Button Content="Войти" Click="registerButton_clicked" Style="{StaticResource menuButton}" FontWeight="Bold" Background="Transparent" Foreground="Black" BorderBrush="Transparent"/>
+        </Border>
+
     </Grid>
 </Page>

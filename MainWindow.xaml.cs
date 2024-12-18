@@ -90,5 +90,10 @@ namespace SmartphoneShop
         {
             HeaderFrame.Navigate(new UnauthorizedHeaderPage(sesseionInfo, "Привет, " + newName));
         }
+
+        public void close_CLick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
