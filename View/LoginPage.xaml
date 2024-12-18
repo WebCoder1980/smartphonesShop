@@ -9,13 +9,15 @@
       Title="LoginPage">
 
     <Grid>
-        <Label Content="Логин:" HorizontalAlignment="Left" Margin="48,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="loginTextBox" HorizontalAlignment="Left" Margin="48,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
-        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="48,144,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="48,170,0,0" VerticalAlignment="Top" Width="264"/>
-        <Label x:Name="captchaLabel" Content="Проверка: сколько будет 1 + 3 * 4/2?" HorizontalAlignment="Left" Margin="48,193,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="capthaTextBox" HorizontalAlignment="Left" Margin="48,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264"/>
-        <Button x:Name="loginButton" Click="loginButton_clicked" Content="Войти" HorizontalAlignment="Left" Height="28" Margin="48,242,0,0" VerticalAlignment="Top" Width="264"/>
-        <Image HorizontalAlignment="Left" Height="380" Margin="597,0,0,0" VerticalAlignment="Center" Width="316" Source="/Image/Image1.png"/>
+        <Label Content="Логин:" HorizontalAlignment="Left" Margin="333,16,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox x:Name="loginTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="333,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="30"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Margin="333,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <PasswordBox x:Name="passwordTextBox" FontFamily="Arial" Style="{StaticResource passwordTextBox}" HorizontalAlignment="Left" Margin="333,126,0,0" VerticalAlignment="Top" Width="264" Height="30"/>
+        <Label x:Name="captchaLabel" Content="Капча:" HorizontalAlignment="Left" Margin="333,160,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold" RenderTransformOrigin="0.501,0.712"/>
+        <TextBox x:Name="capthaTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="333,202,0,0" VerticalAlignment="Top" Width="264" Height="30"/>
+
+        <Border CornerRadius="15" Background="White" Margin="333,256,403,104">
+            <Button Content="Войти" Click="loginButton_clicked" Style="{StaticResource menuButton}" FontWeight="Bold" Background="Transparent" Foreground="Black" BorderBrush="Transparent"/>
+        </Border>
     </Grid>
 </Page>
