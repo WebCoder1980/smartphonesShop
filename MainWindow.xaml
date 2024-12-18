@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="" Height="550" Width="1050" ResizeMode="NoResize">
 
-    <Grid Background="#2CDE85">
+    <Grid Background="#4747DE">
         <Grid Margin="18,0,18,400">
             <Frame x:Name="HeaderFrame" NavigationUIVisibility="Hidden"/>
         </Grid>

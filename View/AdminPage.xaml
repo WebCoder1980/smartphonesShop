@@ -9,16 +9,28 @@
       Title="AdminPage">
 
     <Grid>
-        <Label Content="Обновить товар" HorizontalAlignment="Left" Margin="111,40,0,0" VerticalAlignment="Top"/>
-        <Label Content="id:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="10,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
-        <Button x:Name="getButton" Click="getButton_Click" Content="Получить" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Width="145"/>
-        <Button x:Name="setButton" Click="setButton_Click" Content="Установить" HorizontalAlignment="Left" Margin="160,148,0,0" VerticalAlignment="Top" Width="151"/>
-        <Label Content="Колличество:" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="countTextBox" HorizontalAlignment="Left" Margin="10,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
-        <Label Content="Цена:" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="priceTextBox" HorizontalAlignment="Left" Margin="10,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
-        <Label Content="Название:" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="10,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
+        <Label Content="Обновить товар" HorizontalAlignment="Left" Margin="103,25,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <Label Content="Id:" HorizontalAlignment="Left" Margin="523,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox x:Name="idTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="523,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="30"/>
+
+        <Border CornerRadius="15" Background="White" Margin="523,92,244,268">
+            <Button Content="Получить" Click="getButton_Click" Style="{StaticResource menuButton}" FontWeight="Bold" Foreground="Black" BorderBrush="Transparent"/>
+        </Border>
+        <Border CornerRadius="15" Background="White" Margin="761,92,10,268">
+            <Button Content="Установить" Click="setButton_Click" Style="{StaticResource menuButton}" FontWeight="Bold" Foreground="Black" BorderBrush="Transparent"/>
+        </Border>
+
+
+        <Label Content="Колличество:" HorizontalAlignment="Left" Margin="523,142,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox x:Name="countTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="523,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="30"/>
+
+        <Label Content="Цена:" HorizontalAlignment="Left" Margin="523,220,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox x:Name="priceTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="523,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="30"/>
+
+        <Label Content="Название:" HorizontalAlignment="Left" Margin="523,298,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25" FontFamily="Franklin Gothic Medium" FontWeight="Bold"/>
+        <TextBox x:Name="nameTextBox" FontFamily="Arial" Style="{StaticResource searchTextbox}" HorizontalAlignment="Left" Margin="523,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467" Height="30"/>
+
+
+
     </Grid>
 </Page>

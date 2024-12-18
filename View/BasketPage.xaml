@@ -18,7 +18,11 @@
                 <DataGridTextColumn Header="Название" IsReadOnly="True" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Купить" Click="buyButtonClicked" HorizontalAlignment="Left" Height="43" Margin="10,347,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button Content="Удалить" Click="deleteButtonClicked" HorizontalAlignment="Left" Height="43" Margin="167,347,0,0" VerticalAlignment="Top" Width="152"/>
+        <Border CornerRadius="15" Background="White" Margin="10,345,789,7">
+            <Button Content="Купить" Style="{StaticResource menuButton}" Click="buyButtonClicked"  HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="181" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+        </Border>
+        <Border CornerRadius="15" Background="White" Margin="216,345,583,7">
+            <Button Content="Удалить" Style="{StaticResource menuButton}" Click="deleteButtonClicked"  HorizontalAlignment="Center" Height="48" VerticalAlignment="Center" Width="181" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+        </Border>
     </Grid>
 </Page>
